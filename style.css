@@ -48,8 +48,8 @@ nav {
     background-color: black;
     height: 35px;
     border-bottom: 1px solid #A3A3A3;
-    margin: 0px 2vw;
-    padding: 5px 1vw;
+    margin: 0px 3vw;
+    padding: 5px 2vw;
     z-index: 20;
 }
 
@@ -88,7 +88,7 @@ nav .title {
 }
 .drop-down1 {
     top: 0;
-    transition: .4s;
+    transition: .6s;
 }
 .drop-down2 {
     top: 45px;
@@ -155,9 +155,13 @@ nav .title {
     margin-left: 5px;
 }
 
+
 .frontend {
     position: relative;
     margin-left: 10px;
+}
+.frontend::selection{
+    background-color: #000;
 }
 
 .frontend::before {
@@ -190,6 +194,9 @@ nav .title {
     letter-spacing: 5px;
     cursor: default;
     transition: 1s ease-out;
+}
+#letter::selection{
+    background-color: #000;
 }
 
 .scrollDown-container {
@@ -260,6 +267,10 @@ nav .title {
         display: none;
     }
 
+    nav {
+        margin: 0px 2vw;
+        padding: 8px 1vw;
+    }
 }
 
 @media (min-width: 1500px) {

@@ -1,0 +1,273 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color: #fff;
+}
+
+/*=================================== Loader ========================================*/
+.loader {
+    position: absolute;
+    background: #000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 30;
+}
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: 900;
+    transition: 1s;
+}
+#loader-text {
+    margin-left: 10px;
+    color: #A3A3A3;
+    opacity: .5;
+}
+
+/*================================= Nav bar =======================================*/
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    height: 35px;
+    border-bottom: 1px solid #A3A3A3;
+    margin: 0px 2vw;
+    padding: 5px 1vw;
+    z-index: 20;
+}
+
+nav .title {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: default;
+}
+
+/* ------------ Menu For mobile devices ----------------*/
+.menu{
+    cursor: pointer;
+}
+.menu #line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px;
+    transition: .3s;
+}
+.drop-down-menu {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    list-style-type: none;
+    cursor: pointer;
+}
+#drop-down-option {
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    color: #6A009B;
+    font-weight: bold;
+    margin-bottom: 10px;
+    right: -140px;
+}
+.drop-down1 {
+    top: 0;
+    transition: .4s;
+}
+.drop-down2 {
+    top: 45px;
+    width: 90px;
+    transition: .6s;
+}
+.drop-down3 {
+    top: 90px;
+    width: 100px;
+    transition: .8s;
+}
+.drop-down4 {
+    top: 135px;
+    transition: 1.2s;
+}
+
+/*------------------- Nav menu for wider screen --------------------*/
+.menu-widerScreen {
+    display: none;
+    font-weight: 500;
+}
+
+#nav-button {
+    position: relative;
+    margin-left: 2vw;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 700;
+}
+#nav-button::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: -1px;
+    width: 0%;
+    height: 4px;
+    background-color: #6A009B;
+    transition: .5s;
+}
+#nav-button:hover::after {
+    width: 110%;
+}
+#nav-button:hover {
+    color: #6A009B;
+}
+
+
+/* ===========================First page ==========================*/
+.firstPage {
+    height: 100vh;
+    background: #000000;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.title-wraper {
+    display: flex;
+    justify-content: left;
+    margin-left: 5px;
+}
+
+.frontend {
+    position: relative;
+    margin-left: 10px;
+}
+
+.frontend::before {
+    content: '';
+    background-color: #000000;
+    width: 160px;
+    height: 35px;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    border-left: 1px solid #fff;
+    animation: typeWriter 4s steps(12) infinite;
+}
+
+@keyframes typeWriter {
+    40%, 60% {
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+#letter {
+    opacity: .5;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #A3A3A3;
+    letter-spacing: 5px;
+    cursor: default;
+    transition: 1s ease-out;
+}
+
+.scrollDown-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    height: 80px;
+}
+
+.scrollDownText{
+    opacity: .5;
+    color: #A3A3A3;
+}
+
+.scrollDownArrow{
+    opacity: .5;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    animation: ArrowUpDown 2s infinite;
+}
+@keyframes ArrowUpDown {
+    0% {
+        top: 10px;
+    }
+    50% {
+        top: 20px;
+    }
+
+}
+
+/*================================= Second page ===================================*/
+.secondPage {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(black , #212121, #181818);
+}
+.work-container {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    padding: 40px 20px;
+}
+
+
+
+
+@media (min-width:600px) {
+
+    #letter {
+        font-size: 70px;
+    }
+
+    .menu {
+        display: none;
+    }
+    .menu-widerScreen {
+        display: inline;
+    }
+
+    .loading {
+        font-size: 70px;
+    }
+    .drop-down-menu {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1500px) {
+
+    #letter {
+        font-size: 100px;
+    }
+    .loading {
+        font-size: 80px;
+    }
+}

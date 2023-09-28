@@ -7,16 +7,14 @@ const dropDownOption = document.querySelectorAll('#drop-down-option')
 const devLetter = document.querySelectorAll('#letter')
 const frontend = document.querySelector('.frontend')
 const loaderText = document.querySelectorAll('#loader-text')
-
+const projectGrid = document.querySelector('.grid')
 
 // navbar Menu button for mobile screen
 let menuClicked = 0
 menuButton.addEventListener('click', ()=>{
     if (menuClicked === 0) {
-        line1.style.transform = 'rotate(45deg) translateX(42%)'
-        line3.style.transform = 'rotate(-45deg) translateX(42%)'
-        line1.style.background = '#6A009B'
-        line3.style.background = '#6A009B'
+        line1.style.transform = 'rotate(45deg) translateX(42%) scale(1.1)'
+        line3.style.transform = 'rotate(-45deg) translateX(42%) scale(1.1)'
         line2.style.opacity = '0'
         dropDownOption.forEach(element=>{
             element.style.right = '0'
@@ -45,7 +43,7 @@ devLetter.forEach(letter => {
             letter.style.color = '#A3A3A3'
             letter.style.opacity = '.5'
             letter.style.textShadow = ''
-        },1000)
+        },1500)
     })
 });
 
@@ -62,6 +60,25 @@ function frontendTxtLoad() {
 }
 setInterval(frontendTxtLoad, 12000)
 frontendTxtLoad()
+
+//Second Page
+const projectsList = [
+    {name: 'Simple Music Player', link: 'https://arnav-lunatic.github.io/Simple-Music-Player/', iconPath: 'assests/icons/music.png'},
+    {name: 'Simple Calculator', link: 'https://arnav-lunatic.github.io/Calculator/', iconPath: 'assests/icons/calculator.png'},
+    {name: 'Star Wars', link: 'https://arnav-lunatic.github.io/star-war/', iconPath: 'assests/icons/starwars.png'}
+]
+
+//all the project showcase is injected by js in html
+projectsList.forEach(project => {
+    projectGrid.innerHTML += `
+        <a href="${project.link}" target='_blank'>
+            <div class="project">
+                <img src="${project.iconPath}" alt="Img not found">
+                <div class="projectName">${project.name}</div>
+            </div>
+        </a>`
+});
+
 
 //loader
 j = 400

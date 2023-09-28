@@ -9,6 +9,11 @@ body {
     color: #fff;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 /*=================================== Loader ========================================*/
 .loader {
     position: absolute;
@@ -63,6 +68,9 @@ nav .title {
 .menu{
     cursor: pointer;
 }
+.menu::selection{
+    background-color: #000;
+}
 .menu #line {
     width: 30px;
     height: 3px;
@@ -79,9 +87,7 @@ nav .title {
 }
 #drop-down-option {
     position: absolute;
-    text-align: center;
     font-size: 20px;
-    color: #6A009B;
     font-weight: bold;
     margin-bottom: 10px;
     right: -140px;
@@ -92,12 +98,12 @@ nav .title {
 }
 .drop-down2 {
     top: 45px;
-    width: 90px;
+    width: 89px;
     transition: .6s;
 }
 .drop-down3 {
     top: 90px;
-    width: 100px;
+    width: 97px;
     transition: .8s;
 }
 .drop-down4 {
@@ -125,14 +131,14 @@ nav .title {
     left: -1px;
     width: 0%;
     height: 4px;
-    background-color: #6A009B;
+    background-color: #fff;
     transition: .5s;
 }
 #nav-button:hover::after {
     width: 110%;
 }
 #nav-button:hover {
-    color: #6A009B;
+    opacity: .5;
 }
 
 
@@ -234,17 +240,36 @@ nav .title {
 /*================================= Second page ===================================*/
 .secondPage {
     position: relative;
-    height: 100vh;
     background: linear-gradient(black , #212121, #181818);
 }
+
 .work-container {
-    position: absolute;
-    left: 10px;
-    top: 20px;
-    padding: 40px 20px;
+    
+    padding: 10dvh 20px;
+}
+.work-container .title {
+    text-align: center;
+    font-size: 20px;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: minmax(120px , 300px) minmax(120px , 300px);
+    justify-content: space-around;
+    grid-gap: 20px;
+    width: 100%;
+    margin-top: 100px;
+}
+.project {
 
+}
+.project img {
+    width: 100%;
+}
+.projectName {
+    text-align: center;
+    font-weight: 700;
+}
 
 
 @media (min-width:600px) {
@@ -270,6 +295,14 @@ nav .title {
     nav {
         margin: 0px 2vw;
         padding: 8px 1vw;
+    }
+}
+
+@media (min-width: 1000px) {
+    .grid {
+        justify-content: center;
+        grid-gap: 150px;
+        grid-template-columns: minmax(120px , 300px) minmax(120px , 300px) minmax(120px , 300px);
     }
 }
 

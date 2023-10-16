@@ -69,7 +69,7 @@ projectsList.forEach(project => {
     projectGrid.innerHTML += `
         <a href="${project.link}" target='_blank'>
             <div class="project">
-                <img src="${project.iconPath}">
+                <img class="projectIcon" src="${project.iconPath}">
                 <div class="projectName">${project.name}</div>
             </div>
         </a>`

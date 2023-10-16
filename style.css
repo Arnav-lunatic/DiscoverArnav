@@ -277,9 +277,6 @@ nav .title {
     max-width: 800px;
 }
 
-#aboutme h3 {
-    margin-top: 40px;
-}
 
 /*================================= Second page ===================================*/
 .secondPage {
@@ -308,19 +305,17 @@ nav .title {
     grid-gap: 5px;
     justify-items: center;
 }
-.project img {
+.projectIcon {
     width: 100%;
     border: 2px solid white;
     border-radius: 50%;
-}
-.projectName {
-    text-align: center;
-    font-size: clamp(1rem, 1vw, 2rem);
-    font-weight: 700;
+    transition: .3s;
 }
 
 
-@media (min-width:600px) {
+
+
+@media screen and (min-width:600px) {
 
     #letter {
         font-size: 70px;
@@ -343,6 +338,16 @@ nav .title {
     nav {
         margin: 0px 2vw;
         padding: 8px 1vw;
+    }
+
+    .project:hover .projectIcon {
+        width: 110%;
+        margin: -5%;
+    }
+    .projectName {
+        text-align: center;
+        font-size: clamp(1rem, 1vw, 2rem);
+        font-weight: 700;
     }
 }
 

@@ -68,7 +68,6 @@ const projectsList = [
     {name: 'Tasks Tales', link: 'https://arnav-lunatic.github.io/TasksTales/', iconPath: 'assests/icons/icon.png'},
     {name: 'Simple Music Player', link: 'https://arnav-lunatic.github.io/Simple-Music-Player/', iconPath: 'assests/icons/music.png'},
     {name: 'Simple Calculator', link: 'https://arnav-lunatic.github.io/Calculator/', iconPath: 'assests/icons/calculator.png'},
-    {name: 'Star Wars', link: 'https://arnav-lunatic.github.io/star-war/', iconPath: 'assests/icons/starwars.png'}
 ]
 
 //all the project showcase is injected by js in html

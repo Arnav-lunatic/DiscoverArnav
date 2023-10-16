@@ -218,10 +218,22 @@ nav .title {
     height: 80px;
 }
 
-.scrollDownText{
-    opacity: .5;
-    color: #A3A3A3;
+.webLinksContainer {
+    display: flex;
+    width: 95vw;
+    font-weight: 600;
+    justify-content: right;
+    align-items: center;
 }
+
+.webLinksText {
+    text-align: right;
+    cursor: pointer;
+}
+.webLinksText:hover {
+    text-decoration: underline;
+}
+
 
 .scrollDownArrow{
     opacity: .5;
@@ -232,6 +244,8 @@ nav .title {
     width: 80px;
     animation: ArrowUpDown 2s infinite;
 }
+
+
 @keyframes ArrowUpDown {
     0% {
         top: 10px;
@@ -334,7 +348,7 @@ nav .title {
 }
 
 .contact h1 {
-    font-size: clamp(0.1em, 5vw, 2.5em);
+    font-size: clamp(0.1em, 4vw, 2em);
     padding: clamp(2px, 1vw, 10px);
     letter-spacing: 2px;
     color: #212121;
@@ -343,12 +357,13 @@ nav .title {
 
 .contactLinks {
     display: flex;
+    gap: 10px;
     justify-content: space-between;
     background-color: #fff;
 }
 
 .contactIcon {
-    width: clamp(8px, 5vw, 40px);
+    width: clamp(20px, 5vw, 35px);
     height: 100%;
     background-color: #fff;
 }
@@ -359,12 +374,16 @@ nav .title {
 }
 
 .devDetails p{
-    font-size: clamp(.8em, 2vw, 1.3em);
+    font-size: clamp(.8em, 2vw, 1em);
     background-color: #fff;
     color: #212121;
 }
 
 @media screen and (min-width:900px) {
+    .contactLinksContainer {
+        display: flex;
+        gap:20px;
+    }
     .contact {
         display: flex;
         justify-content: space-around;
@@ -376,4 +395,8 @@ nav .title {
     .devDetails {
         margin-top: 0;
     }
+}
+
+.email {
+    opacity: .6;
 }

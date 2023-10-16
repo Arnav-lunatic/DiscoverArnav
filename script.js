@@ -3,7 +3,7 @@ const menuButton = document.querySelector('.menu')
 const line1 = document.querySelector('.line1')
 const line2 = document.querySelector('.line2')
 const line3 = document.querySelector('.line3')
-const dropDownOption = document.querySelectorAll('#drop-down-option')
+const dropDownMenu = document.querySelector('.drop-down-menu')
 const devLetter = document.querySelectorAll('#letter')
 const frontend = document.querySelector('.frontend')
 const loaderText = document.querySelectorAll('#loader-text')
@@ -16,19 +16,13 @@ menuButton.addEventListener('click', ()=>{
         line1.style.transform = 'rotate(45deg) translateX(42%) scale(1.1)'
         line3.style.transform = 'rotate(-45deg) translateX(42%) scale(1.1)'
         line2.style.opacity = '0'
-        dropDownOption.forEach(element=>{
-            element.style.right = '0'
-        })
+        dropDownMenu.style.top = '45px'
         menuClicked = 1
     }else {
         line1.style.transform = ''
         line3.style.transform = ''
-        line1.style.background = 'white'
-        line3.style.background = 'white'
+        dropDownMenu.style.top = '-500px'
         line2.style.opacity = '1'
-        dropDownOption.forEach(element=>{
-            element.style.right = '-140px'
-        })
         menuClicked = 0
     }
 })

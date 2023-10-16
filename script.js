@@ -63,6 +63,9 @@ frontendTxtLoad()
 
 //Second Page
 const projectsList = [
+    { name: 'LunaInsight', link: 'https://arnav-lunatic.github.io/LunaInsight/', iconPath: 'assests/icons/news.png' },
+    { name: 'LunaForecast', link: 'https://arnav-lunatic.github.io/LunaForecast/', iconPath: 'assests/icons/weather-app.png' },
+    {name: 'Tasks Tales', link: 'https://arnav-lunatic.github.io/TasksTales/', iconPath: 'assests/icons/icon.png'},
     {name: 'Simple Music Player', link: 'https://arnav-lunatic.github.io/Simple-Music-Player/', iconPath: 'assests/icons/music.png'},
     {name: 'Simple Calculator', link: 'https://arnav-lunatic.github.io/Calculator/', iconPath: 'assests/icons/calculator.png'},
     {name: 'Star Wars', link: 'https://arnav-lunatic.github.io/star-war/', iconPath: 'assests/icons/starwars.png'}
@@ -73,7 +76,7 @@ projectsList.forEach(project => {
     projectGrid.innerHTML += `
         <a href="${project.link}" target='_blank'>
             <div class="project">
-                <img src="${project.iconPath}" alt="Img not found">
+                <img src="${project.iconPath}">
                 <div class="projectName">${project.name}</div>
             </div>
         </a>`

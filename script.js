@@ -29,6 +29,8 @@ menuButton.addEventListener('click', ()=>{
         dropDownMenu.style.top = '50px'
         dropDownMenu.style.opacity = '1'
         dropDownMenu.style.pointerEvents = 'auto'
+        dropDownMenu.style.backdropFilter = 'blur(8px)';
+
         menuClicked = 1
         closePopUp()
     }else {

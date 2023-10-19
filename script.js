@@ -12,19 +12,27 @@ const projectDescriptionPopup = document.querySelector('.projectDiscription')
 
 // navbar Menu button for mobile screen
 let menuClicked = 0
+function navMenuClose() {
+    line1.style.transform = ''
+    line3.style.transform = ''
+    dropDownMenu.style.top = '-100px'
+    line2.style.opacity = '1'
+    dropDownMenu.style.opacity = '0'
+    dropDownMenu.style.pointerEvents = 'none'
+    menuClicked = 0
+}
 menuButton.addEventListener('click', ()=>{
     if (menuClicked === 0) {
         line1.style.transform = 'rotate(45deg) translateX(42%) scale(1.1)'
         line3.style.transform = 'rotate(-45deg) translateX(42%) scale(1.1)'
         line2.style.opacity = '0'
-        dropDownMenu.style.top = '45px'
+        dropDownMenu.style.top = '50px'
+        dropDownMenu.style.opacity = '1'
+        dropDownMenu.style.pointerEvents = 'auto'
         menuClicked = 1
+        closePopUp()
     }else {
-        line1.style.transform = ''
-        line3.style.transform = ''
-        dropDownMenu.style.top = '-500px'
-        line2.style.opacity = '1'
-        menuClicked = 0
+        navMenuClose()
     }
 })
 
@@ -90,8 +98,17 @@ projectsList.forEach(project => {
 });
 
 // Project Description PopUp
+function closePopUp() {
+    projectDescriptionPopup.style.opacity = '0'
+    projectDescriptionPopup.style.pointerEvents = 'none'
+}
+
 document.querySelectorAll('.project').forEach((element) => {
     element.addEventListener('click', () => {
+        // if navMenu is opened, then it will close it
+        navMenuClose()
+
+        projectDescriptionPopup.innerHTML = ''
         projectDescriptionPopup.style.opacity = '1'
         projectDescriptionPopup.style.pointerEvents = 'auto'
     
@@ -109,9 +126,7 @@ document.querySelectorAll('.project').forEach((element) => {
         </a>`
 
         document.querySelector('.popupClose').addEventListener('click', () => {
-            projectDescriptionPopup.style.opacity = '0'
-            projectDescriptionPopup.style.pointerEvents = 'none'
-            projectDescriptionPopup.innerHTML = ''
+            closePopUp()
         })
     })
 })

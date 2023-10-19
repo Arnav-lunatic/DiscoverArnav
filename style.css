@@ -367,6 +367,7 @@ nav .title {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 20px;
+    text-align: center;
     border: 1px solid #ffffff50;
     transition: .3s;
     z-index: 200;

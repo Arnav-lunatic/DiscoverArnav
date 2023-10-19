@@ -8,6 +8,7 @@ const devLetter = document.querySelectorAll('#letter')
 const frontend = document.querySelector('.frontend')
 const loaderText = document.querySelectorAll('#loader-text')
 const projectGrid = document.querySelector('.grid')
+const projectDescriptionPopup = document.querySelector('.projectDiscription')
 
 // navbar Menu button for mobile screen
 let menuClicked = 0
@@ -57,23 +58,67 @@ frontendTxtLoad()
 
 //Second Page
 const projectsList = [
-    { name: 'LunaInsight', link: 'https://arnav-lunatic.github.io/LunaInsight/', iconPath: 'assests/icons/news.png' },
-    { name: 'LunaForecast', link: 'https://arnav-lunatic.github.io/LunaForecast/', iconPath: 'assests/icons/weather-app.png' },
-    {name: 'Tasks Tales', link: 'https://arnav-lunatic.github.io/TasksTales/', iconPath: 'assests/icons/icon.png'},
-    {name: 'Simple Music Player', link: 'https://arnav-lunatic.github.io/Simple-Music-Player/', iconPath: 'assests/icons/music.png'},
-    {name: 'Simple Calculator', link: 'https://arnav-lunatic.github.io/Calculator/', iconPath: 'assests/icons/calculator.png'},
+    { name: 'LunaInsight', iconPath: 'assests/icons/news.png', id: 'lunaInsight' },
+    { name: 'Luna Forecast', iconPath: 'assests/icons/weather-app.png', id: 'lunaForecast' },
+    {name: 'Tasks Tales', iconPath: 'assests/icons/icon.png', id: 'tasksTales'},
+    {name: 'Simple Music Player', iconPath: 'assests/icons/music.png', id: 'simpleMusicPlayer'},
+    {name: 'Simple Calculator', iconPath: 'assests/icons/calculator.png', id: 'calculator'},
 ]
+
+const projectDescription = [{
+    lunaInsight: `It's a responsive News website made using HTML, CSS, and JavaScript using "New York Times API".`,
+    lunaForecast: `It's a Weather WebApp made using HTML, CSS, and JavaScript using "OpenWeatherMap API"`,
+    tasksTales: `It's a Todo WebApp made using HTML, CSS, and Javascript and it stores data in "Browser's Local Storage"`,
+    simpleMusicPlayer: `It's a Music Player made using HTML, CSS, and JavaScript`,
+    calculator: `It's a Simple Calculator made using HTML, CSS, and JavaScript without 'Eval Function'`,
+},
+    {
+        lunaInsight: `https://arnav-lunatic.github.io/LunaInsight/`,
+        lunaForecast: `https://arnav-lunatic.github.io/LunaForecast/`,
+        tasksTales: `https://arnav-lunatic.github.io/TasksTales/`,
+        simpleMusicPlayer: `https://arnav-lunatic.github.io/Simple-Music-Player/`,
+        calculator: `https://arnav-lunatic.github.io/Calculator/`,
+}]
 
 //all the project showcase is injected by js in html
 projectsList.forEach(project => {
     projectGrid.innerHTML += `
-        <a href="${project.link}" target='_blank'>
-            <div class="project">
+            <div class="project" id=${project.id}>
                 <img class="projectIcon" src="${project.iconPath}">
                 <div class="projectName">${project.name}</div>
-            </div>
-        </a>`
+            </div>`
 });
+
+// Project Description PopUp
+document.querySelectorAll('.project').forEach((element) => {
+    element.addEventListener('click', () => {
+        projectDescriptionPopup.style.opacity = '1'
+        projectDescriptionPopup.style.pointerEvents = 'auto'
+    
+        projectDescriptionPopup.innerHTML = `
+        <img class="popupClose" src="assests/close.png" alt="x">
+        <h1>Luna Insight</h1>
+        <div class="projectImg">
+            <img src="assests/ProjectScreenshots/desktop/${element.id}.png" class="desktopS">
+            <img src="assests/ProjectScreenshots/phone/${element.id}.jpg" class="phoneS">
+        </div>
+        <p>${projectDescription[0][element.id]}</p>
+
+        <a href=${projectDescription[1][element.id]} target='_blank'>
+            <button class="checkoutProject">Check Out</button>
+        </a>`
+
+        document.querySelector('.popupClose').addEventListener('click', () => {
+            projectDescriptionPopup.style.opacity = '0'
+            projectDescriptionPopup.style.pointerEvents = 'none'
+            projectDescriptionPopup.innerHTML = ''
+        })
+    })
+})
+
+
+
+
 
 
 //loader

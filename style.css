@@ -257,27 +257,6 @@ nav .title {
 }
 
 
-/* ======================about me=================================== */
-#aboutme {
-    display: grid;
-    justify-items: center;
-    align-content: center;
-    text-align: center;
-    min-height: 100dvh;
-    background: linear-gradient(black , #212121, #181818);
-}
-
-#aboutme h1 {
-    font-size: clamp(1.5rem, 5vw, 2rem);
-}
-
-#aboutme p {
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
-    padding: clamp(10px, 10vw, 20px) 0;
-    max-width: 800px;
-}
-
-
 /*================================= Second page ===================================*/
 .secondPage {
     position: relative;
@@ -367,6 +346,103 @@ nav .title {
         font-size: 80px;
     }
 }
+
+/* ====================== Project Description PopUp =====================*/
+.projectDiscription {
+    opacity: 0;
+    pointer-events: none;
+    display: grid;
+    justify-items: center;
+    align-content: space-around;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90vw;
+    max-width: 1000px;
+    background-color: #21212180;
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border: 1px solid #ffffff50;
+    transition: .3s;
+}
+
+.popupClose {
+    position: absolute;
+    width: 4vw;
+    max-width: 24px;
+    top: clamp(10px, 2vw, 30px);
+    right: clamp(10px, 2vw, 30px);
+    border-radius: 50%;
+    transition: .15s;
+}
+
+.popupClose:hover {
+    background-color: #a3a3a350;
+    padding: 5px;
+    margin: -5px;
+}
+
+.projectDiscription h1{
+    font-size: clamp(1rem, 4vw, 2rem);
+    margin-top: 10px;
+}
+
+.projectDiscription p {
+    font-size: clamp(.8rem, 3vw, 1.2rem);
+    padding: clamp(10px, 10vh, 30px);
+}
+
+.projectImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(10px, 10vh, 30px) 0px;
+}
+
+.desktopS {
+    width: 60vw;
+    max-width: 740px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+}
+
+.phoneS {
+    width: 20vw;
+    max-width: 246px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    margin: 30px 0 0 -50px;
+}
+
+.checkoutProject {
+    font-size: 20px;
+    padding: 2px 5px;
+    margin: clamp(10px, 10vw, 40px);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ======================about me=================================== */
+#aboutme {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    min-height: 100dvh;
+    background: linear-gradient(black , #212121, #181818);
+}
+
+#aboutme h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+#aboutme p {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    padding: clamp(10px, 10vw, 20px) 0;
+    max-width: 800px;
+}
+
 
 
 /* Contact Page */

@@ -276,7 +276,7 @@ nav .title {
 
 .grid {
     display: grid;
-    grid-template-columns: minmax(120px , 200px) minmax(120px , 200px);
+    grid-template-columns: minmax(100px , 150px) minmax(100px , 150px);
     justify-content: space-around;
     grid-gap: clamp(20px, 10vw, 100px);
     width: 100%;
@@ -289,8 +289,6 @@ nav .title {
 }
 .projectIcon {
     width: 100%;
-    border: 2px solid white;
-    border-radius: 50%;
     transition: .3s;
 }
 
@@ -328,7 +326,7 @@ nav .title {
     }
     .projectName {
         text-align: center;
-        font-size: clamp(1rem, 1vw, 2rem);
+        font-size: clamp(1rem, 1vw, 1.5rem);
         font-weight: 700;
     }
 }
@@ -336,7 +334,7 @@ nav .title {
 @media (min-width: 1000px) {
     .grid {
         justify-content: center;
-        grid-template-columns: minmax(120px , 200px) minmax(120px , 200px) minmax(120px , 200px) minmax(120px , 200px);
+        grid-template-columns: minmax(100px , 150px) minmax(100px , 150px) minmax(100px , 150px) minmax(100px , 150px);
     }
 }
 

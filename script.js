@@ -40,14 +40,15 @@ menuButton.addEventListener('click', ()=>{
 //first effects
 devLetter.forEach(letter => {
     letter.addEventListener('mouseover', () => {
-        letter.style.opacity = '1'
-        letter.style.color = '#fff'
-        letter.style.textShadow = '2px 2px 10px #A3A3A3'
-        setTimeout(()=>{
-            letter.style.color = '#A3A3A3'
-            letter.style.opacity = '.5'
+        letter.style.webkitTextFillColor = 'transparent'
+        letter.style.textShadow = '2px 2px 50px #7C00F9'
+        letter.style.setProperty('--letterShadow', '1')
+        
+        setTimeout(() => {
+            letter.style.webkitTextFillColor = '#A3A3A3'
             letter.style.textShadow = ''
-        },1500)
+            letter.style.setProperty('--letterShadow', '0')
+        },2000)
     })
 });
 

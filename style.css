@@ -5,6 +5,7 @@
 }
 
 body {
+    position: relative;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     color: #fff;
     background-color: #000;
@@ -42,6 +43,24 @@ a {
     margin-left: 10px;
     color: #A3A3A3;
     opacity: .5;
+}
+
+/*================================= Cursor =================================*/
+
+.cursor {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-image: radial-gradient(#B300F9,#7C00F9,#D800F8);
+    filter: blur(10px);
+    opacity: .3;
+    box-shadow: 
+    0 0 10px #F900BB,
+    0 0 10px #F900EC;
+    border-radius: 50%;
+    z-index: 100;
+    pointer-events: none;
+    transition: transform 0.3s;
 }
 
 /*================================= Nav bar =======================================*/
@@ -145,6 +164,7 @@ nav .title {
 
 /* ===========================First page ==========================*/
 .firstPage {
+    position: relative;
     height: 100vh;
 }
 
@@ -307,7 +327,6 @@ nav .title {
 .grid {
     display: grid;
     grid-template-columns: minmax(100px , 150px) minmax(100px , 150px);
-    justify-content: space-around;
     grid-gap: clamp(20px, 10vw, 100px);
     width: 100%;
     margin-top: 100px;
@@ -376,13 +395,14 @@ nav .title {
     pointer-events: none;
     display: grid;
     justify-items: center;
-    align-content: space-around;
     position: fixed;
     top: 50%;
     left: 50%;
+    padding: clamp(2px, 2vw, 10px);
     transform: translate(-50%,-50%);
     width: 90vw;
     max-width: 1000px;
+    max-height: 95vh;
     background-color: #21212180;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -428,14 +448,14 @@ nav .title {
 
 .desktopS {
     width: 60vw;
-    max-width: 740px;
+    max-width: 700px;
     border-radius: 20px;
     border: 2px solid #fff;
 }
 
 .phoneS {
     width: 20vw;
-    max-width: 246px;
+    max-width: 233px;
     border-radius: 10px;
     border: 2px solid #fff;
     margin: 30px 0 0 -50px;
@@ -444,7 +464,6 @@ nav .title {
 .checkoutProject {
     font-size: 20px;
     padding: 2px 5px;
-    margin: clamp(10px, 10vw, 40px);
     font-weight: 700;
     cursor: pointer;
 }

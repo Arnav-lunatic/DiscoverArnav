@@ -9,6 +9,16 @@ const frontend = document.querySelector('.frontend')
 const loaderText = document.querySelectorAll('#loader-text')
 const projectGrid = document.querySelector('.grid')
 const projectDescriptionPopup = document.querySelector('.projectDiscription')
+const cursor = document.querySelector('.cursor')
+
+// Cursor 
+
+document.addEventListener('mousemove', e => {
+    cursor.style.top = `${e.pageY-32}px`
+    cursor.style.left = `${e.pageX-32}px`
+})
+
+
 
 // navbar Menu button for mobile screen
 let menuClicked = 0
@@ -133,7 +143,11 @@ document.querySelectorAll('.project').forEach((element) => {
     })
 })
 
-
+window.addEventListener('keydown', (e) => {
+    if(e.key === "Escape") {
+        closePopUp()
+    }
+})
 
 
 

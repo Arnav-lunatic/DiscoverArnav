@@ -48,6 +48,7 @@ a {
 /*================================= Cursor =================================*/
 
 .cursor {
+    display: none;
     position: absolute;
     width: 70px;
     height: 70px;
@@ -61,6 +62,12 @@ a {
     z-index: 100;
     pointer-events: none;
     transition: transform 0.3s;
+}
+
+@media (min-width:900px) {
+    .cursor {
+        display: inline;
+    }
 }
 
 /*================================= Nav bar =======================================*/

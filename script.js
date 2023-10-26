@@ -11,7 +11,7 @@ const projectGrid = document.querySelector('.grid')
 const projectDescriptionPopup = document.querySelector('.projectDiscription')
 const cursor = document.querySelector('.cursor')
 
-// Cursor 
+// Cursor
 
 document.addEventListener('mousemove', e => {
     cursor.style.top = `${e.pageY-32}px`

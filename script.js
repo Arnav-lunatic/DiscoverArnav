@@ -172,14 +172,14 @@ function preload_image(im_url) {
     let img = new Image();
     img.src = im_url;
 }
-preload_image(assests / ProjectScreenshots / desktop / calculator.png)
-preload_image(assests / ProjectScreenshots / desktop / lunaForecast.png)
-preload_image(assests / ProjectScreenshots / desktop / lunaInsight.png)
-preload_image(assests / ProjectScreenshots / desktop / simpleMusicPlayer.png)
-preload_image(assests / ProjectScreenshots / desktop / tasksTales.png)
+preload_image('assests/ProjectScreenshots/desktop/calculator.png')
+preload_image('assests/ProjectScreenshots/desktop/lunaForecast.png')
+preload_image('assests/ProjectScreenshots/desktop/lunaInsight.png')
+preload_image('assests/ProjectScreenshots/desktop/simpleMusicPlayer.png')
+preload_image('assests/ProjectScreenshots/desktop/tasksTales.png')
 
-preload_image(assests / ProjectScreenshots / phone / calculator.png)
-preload_image(assests / ProjectScreenshots / phone / lunaForecast.png)
-preload_image(assests / ProjectScreenshots / phone / lunaInsight.png)
-preload_image(assests / ProjectScreenshots / phone / simpleMusicPlayer.png)
-preload_image(assests / ProjectScreenshots / phone / tasksTales.png)
+preload_image('assests/ProjectScreenshots/phone/calculator.png')
+preload_image('assests/ProjectScreenshots/phone/lunaForecast.png')
+preload_image('assests/ProjectScreenshots/phone/lunaInsight.png')
+preload_image('assests/ProjectScreenshots/phone/simpleMusicPlayer.png')
+preload_image('assests/ProjectScreenshots/phone/tasksTales.png')

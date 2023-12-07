@@ -7,8 +7,9 @@ const dropDownMenu = document.querySelector('.drop-down-menu')
 const devLetter = document.querySelectorAll('#letter')
 const frontend = document.querySelector('.frontend')
 const loaderText = document.querySelectorAll('#loader-text')
-const projectGrid = document.querySelector('.grid')
+const projectGrid = document.querySelector('.projectGrid')
 const projectDescriptionPopup = document.querySelector('.projectDiscription')
+const blogGrid = document.querySelector('.blogGrid')
 const cursor = document.querySelector('.cursor')
 
 // Cursor
@@ -25,7 +26,7 @@ let menuClicked = 0
 function navMenuClose() {
     line1.style.transform = ''
     line3.style.transform = ''
-    dropDownMenu.style.top = '-100px'
+    dropDownMenu.style.right = '-150px'
     line2.style.opacity = '1'
     dropDownMenu.style.opacity = '0'
     dropDownMenu.style.pointerEvents = 'none'
@@ -36,7 +37,7 @@ menuButton.addEventListener('click', ()=>{
         line1.style.transform = 'rotate(45deg) translateX(42%) scale(1.1)'
         line3.style.transform = 'rotate(-45deg) translateX(42%) scale(1.1)'
         line2.style.opacity = '0'
-        dropDownMenu.style.top = '50px'
+        dropDownMenu.style.right = '-13px'
         dropDownMenu.style.opacity = '1'
         dropDownMenu.style.pointerEvents = 'auto'
 
@@ -80,9 +81,9 @@ frontendTxtLoad()
 const projectsList = [
     { name: 'LunaInsight', iconPath: 'assests/icons/news.png', id: 'lunaInsight' },
     { name: 'Luna Forecast', iconPath: 'assests/icons/weather-app.png', id: 'lunaForecast' },
-    {name: 'Tasks Tales', iconPath: 'assests/icons/icon.png', id: 'tasksTales'},
-    {name: 'Simple Music Player', iconPath: 'assests/icons/music.png', id: 'simpleMusicPlayer'},
-    {name: 'Simple Calculator', iconPath: 'assests/icons/calculator.png', id: 'calculator'},
+    { name: 'Tasks Tales', iconPath: 'assests/icons/icon.png', id: 'tasksTales' },
+    { name: 'Simple Music Player', iconPath: 'assests/icons/music.png', id: 'simpleMusicPlayer' },
+    { name: 'Simple Calculator', iconPath: 'assests/icons/calculator.png', id: 'calculator' },
 ]
 
 const projectDescription = [{
@@ -104,7 +105,7 @@ const projectDescription = [{
 projectsList.forEach(project => {
     projectGrid.innerHTML += `
             <div class="project" id=${project.id}>
-                <img class="projectIcon" src="${project.iconPath}">
+                <img class="icon" src="${project.iconPath}">
                 <div class="projectName">${project.name}</div>
             </div>`
 });
@@ -149,8 +150,24 @@ window.addEventListener('keydown', (e) => {
     }
 })
 
-
-
+// Blog 
+const blogsList = [
+    { name: 'UI and UX', iconPath: 'assests/icons/UIUX.png', id: 'UIUX', link: 'https://arnav-lunatic.github.io/webDesign/' },
+    { name: '', iconPath: '', id: '', link: '' },
+    { name: '', iconPath: '', id: '', link: '' },
+    { name: '', iconPath: '', id: '', link: '' },
+    
+]
+// injecting blogs in blogs grid
+blogsList.forEach(blog => {
+    blogGrid.innerHTML += `
+        <a href='https://arnav-lunatic.github.io/webDesign/' target='_blank'>
+            <div class="project" id=${blog.id}>
+                <img class="icon" src="${blog.iconPath}">
+                <div class="projectName">${blog.name}</div>
+            </div>
+        </a>`
+});
 
 //loader
 j = 400

@@ -115,18 +115,16 @@ nav .title {
     padding: 15px;
     position: absolute;
     opacity: 0;
-    top: -120px;
-    right: 0;
+    top: 45px;
+    right: -150px;
     list-style-type: none;
     cursor: pointer;
     background-color: #00000050;
-    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    border-radius: 10px;
+    border-radius: 0 0 0 10px;
     border: 1px solid #A3A3A3;
     transition: .3s;
     pointer-events: none;
-    z-index: -1;
 }
 #drop-down-option {
     font-size: 20px;
@@ -173,6 +171,7 @@ nav .title {
 .firstPage {
     position: relative;
     height: 100vh;
+    height: 100dvh;
 }
 
 .container {
@@ -325,7 +324,7 @@ nav .title {
 .work-container {
     padding: 10dvh 20px;
 }
-.work-container .title {
+.title {
     text-align: center;
     font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 700;
@@ -333,17 +332,20 @@ nav .title {
 
 .grid {
     display: grid;
-    grid-template-columns: minmax(100px , 150px) minmax(100px , 150px);
+    grid-template-columns: repeat(auto-fit, minmax(130px , 1fr));
+    max-width: 1000px;
     grid-gap: clamp(20px, 10vw, 100px);
     width: 100%;
-    margin-top: 100px;
+    margin: 0 auto;
+    padding: 100px 0;
+    border-bottom: 1px solid #A3A3A3;
 }
 .project {
     display: grid;
     grid-gap: 5px;
     justify-items: center;
 }
-.projectIcon {
+.icon {
     width: 100%;
     transition: .3s;
 }
@@ -372,7 +374,7 @@ nav .title {
         padding: 8px 1vw;
     }
 
-    .project:hover .projectIcon {
+    .project:hover .icon {
         width: 110%;
         margin: -5%;
     }
@@ -380,13 +382,6 @@ nav .title {
         text-align: center;
         font-size: clamp(1rem, 1vw, 1.5rem);
         font-weight: 700;
-    }
-}
-
-@media (min-width: 1000px) {
-    .grid {
-        justify-content: center;
-        grid-template-columns: minmax(100px , 150px) minmax(100px , 150px) minmax(100px , 150px) minmax(100px , 150px);
     }
 }
 

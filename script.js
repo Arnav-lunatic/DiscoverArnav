@@ -79,11 +79,12 @@ frontendTxtLoad()
 
 //Second Page
 const projectsList = [
-    { name: 'LunaInsight', iconPath: 'assests/icons/news.png', id: 'lunaInsight' },
-    { name: 'Luna Forecast', iconPath: 'assests/icons/weather-app.png', id: 'lunaForecast' },
-    { name: 'Tasks Tales', iconPath: 'assests/icons/icon.png', id: 'tasksTales' },
-    { name: 'Simple Music Player', iconPath: 'assests/icons/music.png', id: 'simpleMusicPlayer' },
-    { name: 'Simple Calculator', iconPath: 'assests/icons/calculator.png', id: 'calculator' },
+    { name: 'Simple Music Player', iconPath: 'assets/icons/music.png', id: 'simpleMusicPlayer' },
+    { name: 'LunaInsight', iconPath: 'assets/icons/news.png', id: 'lunaInsight' },
+    { name: 'Luna Forecast', iconPath: 'assets/icons/weather-app.png', id: 'lunaForecast' },
+    { name: 'Tasks Tales', iconPath: 'assets/icons/icon.png', id: 'tasksTales' },
+    { name: 'Simon Game', iconPath: 'assets/icons/simonGame.png', id: 'simonGame' },
+    { name: 'Simple Calculator', iconPath: 'assets/icons/calculator.png', id: 'calculator' },
 ]
 
 const projectDescription = [{
@@ -91,13 +92,15 @@ const projectDescription = [{
     lunaForecast: `It's a Weather WebApp made using HTML, CSS, and JavaScript using "OpenWeatherMap API"`,
     tasksTales: `It's a Todo WebApp made using HTML, CSS, and Javascript and it stores data in "Browser's Local Storage"`,
     simpleMusicPlayer: `It's a Music Player made using HTML, CSS, and JavaScript`,
+    simonGame: `It's a simon game made using HTML, CSS, and Javascript and it stores data in "Browser's Local Storage"`,
     calculator: `It's a Simple Calculator made using HTML, CSS, and JavaScript without 'Eval Function'`,
 },
     {
+        simpleMusicPlayer: `https://arnav-lunatic.github.io/Simple-Music-Player/`,
         lunaInsight: `https://arnav-lunatic.github.io/LunaInsight/`,
         lunaForecast: `https://arnav-lunatic.github.io/LunaForecast/`,
         tasksTales: `https://arnav-lunatic.github.io/TasksTales/`,
-        simpleMusicPlayer: `https://arnav-lunatic.github.io/Simple-Music-Player/`,
+        simonGame: `https://arnav-lunatic.github.io/Simon-Game/`,
         calculator: `https://arnav-lunatic.github.io/Calculator/`,
 }]
 
@@ -126,11 +129,11 @@ document.querySelectorAll('.project').forEach((element) => {
         projectDescriptionPopup.style.pointerEvents = 'auto'
     
         projectDescriptionPopup.innerHTML = `
-        <img class="popupClose" src="assests/close.png" alt="x">
+        <img class="popupClose" src="assets/close.png" alt="x">
         <h1>Luna Insight</h1>
         <div class="projectImg">
-            <img src="assests/ProjectScreenshots/desktop/${element.id}.png" class="desktopS">
-            <img src="assests/ProjectScreenshots/phone/${element.id}.jpg" class="phoneS">
+            <img src="assets/ProjectScreenshots/desktop/${element.id}.png" class="desktopS">
+            <img src="assets/ProjectScreenshots/phone/${element.id}.jpg" class="phoneS">
         </div>
         <p>${projectDescription[0][element.id]}</p>
 
@@ -152,7 +155,7 @@ window.addEventListener('keydown', (e) => {
 
 // Blog 
 const blogsList = [
-    { name: 'UI and UX', iconPath: 'assests/icons/UIUX.png', id: 'UIUX', link: 'https://arnav-lunatic.github.io/webDesign/' },
+    { name: 'UI and UX', iconPath: 'assets/icons/UIUX.png', id: 'UIUX', link: 'https://arnav-lunatic.github.io/webDesign/' },
     { name: '', iconPath: '', id: '', link: '' },
     { name: '', iconPath: '', id: '', link: '' },
     { name: '', iconPath: '', id: '', link: '' },
@@ -189,14 +192,14 @@ function preload_image(im_url) {
     let img = new Image();
     img.src = im_url;
 }
-preload_image('assests/ProjectScreenshots/desktop/calculator.png')
-preload_image('assests/ProjectScreenshots/desktop/lunaForecast.png')
-preload_image('assests/ProjectScreenshots/desktop/lunaInsight.png')
-preload_image('assests/ProjectScreenshots/desktop/simpleMusicPlayer.png')
-preload_image('assests/ProjectScreenshots/desktop/tasksTales.png')
+preload_image('assets/ProjectScreenshots/desktop/calculator.png')
+preload_image('assets/ProjectScreenshots/desktop/lunaForecast.png')
+preload_image('assets/ProjectScreenshots/desktop/lunaInsight.png')
+preload_image('assets/ProjectScreenshots/desktop/simpleMusicPlayer.png')
+preload_image('assets/ProjectScreenshots/desktop/tasksTales.png')
 
-preload_image('assests/ProjectScreenshots/phone/calculator.jpg')
-preload_image('assests/ProjectScreenshots/phone/lunaForecast.jpg')
-preload_image('assests/ProjectScreenshots/phone/lunaInsight.jpg')
-preload_image('assests/ProjectScreenshots/phone/simpleMusicPlayer.jpg')
-preload_image('assests/ProjectScreenshots/phone/tasksTales.jpg')
+preload_image('assets/ProjectScreenshots/phone/calculator.jpg')
+preload_image('assets/ProjectScreenshots/phone/lunaForecast.jpg')
+preload_image('assets/ProjectScreenshots/phone/lunaInsight.jpg')
+preload_image('assets/ProjectScreenshots/phone/simpleMusicPlayer.jpg')
+preload_image('assets/ProjectScreenshots/phone/tasksTales.jpg')

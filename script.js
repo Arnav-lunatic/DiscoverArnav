@@ -80,7 +80,7 @@ frontendTxtLoad()
 //Second Page
 const projectsList = [
     { name: 'Simple Music Player', iconPath: 'assets/icons/music.png', id: 'simpleMusicPlayer' },
-    { name: 'LunaInsight', iconPath: 'assets/icons/news.png', id: 'lunaInsight' },
+    { name: 'Luna Insight', iconPath: 'assets/icons/news.png', id: 'lunaInsight' },
     { name: 'Luna Forecast', iconPath: 'assets/icons/weather-app.png', id: 'lunaForecast' },
     { name: 'Tasks Tales', iconPath: 'assets/icons/icon.png', id: 'tasksTales' },
     { name: 'Simon Game', iconPath: 'assets/icons/simonGame.png', id: 'simonGame' },
@@ -192,14 +192,9 @@ function preload_image(im_url) {
     let img = new Image();
     img.src = im_url;
 }
-preload_image('assets/ProjectScreenshots/desktop/calculator.png')
-preload_image('assets/ProjectScreenshots/desktop/lunaForecast.png')
-preload_image('assets/ProjectScreenshots/desktop/lunaInsight.png')
-preload_image('assets/ProjectScreenshots/desktop/simpleMusicPlayer.png')
-preload_image('assets/ProjectScreenshots/desktop/tasksTales.png')
 
-preload_image('assets/ProjectScreenshots/phone/calculator.jpg')
-preload_image('assets/ProjectScreenshots/phone/lunaForecast.jpg')
-preload_image('assets/ProjectScreenshots/phone/lunaInsight.jpg')
-preload_image('assets/ProjectScreenshots/phone/simpleMusicPlayer.jpg')
-preload_image('assets/ProjectScreenshots/phone/tasksTales.jpg')
+projectsList.forEach(element => {
+    preload_image(`assets/ProjectScreenshots/desktop/${element.id}.png`)
+    preload_image(`assets/ProjectScreenshots/phone/${element.id}.jpg`)
+});
+

@@ -1,1 +1,1 @@
-***discoverArnav*** - https://arnav-lunatic.github.io/DiscoverArnav/
+[DiscoverArnav](https://discoverarnav.vercel.app/)

@@ -1,1 +1,1 @@
-[DiscoverArnav](https://discoverarnav.vercel.app/)
+Check Out - [DiscoverArnav](https://discoverarnav.vercel.app/)

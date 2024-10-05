@@ -70,107 +70,9 @@ a {
     }
 }
 
-/*================================= Nav bar =======================================*/
-
-nav {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #00000050;
-    backdrop-filter: blur(8px);
-    height: 35px;
-    border-bottom: 1px solid #A3A3A3;
-    margin: 0px 3vw;
-    padding: 5px 2vw;
-    z-index: 100;
-}
-
-nav .title {
-    font-size: 20px;
-    font-weight: bold;
-    cursor: default;
-}
-
-/* ------------ Menu For mobile devices ----------------*/
-.menu{
-    cursor: pointer;
-}
-.menu::selection{
-    background-color: #000;
-}
-.menu #line {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px;
-    transition: .3s;
-}
-.drop-down-menu {
-    display: grid;
-    padding: 15px;
-    position: absolute;
-    opacity: 0;
-    top: 45px;
-    right: -150px;
-    list-style-type: none;
-    cursor: pointer;
-    background-color: #00000050;
-    backdrop-filter: blur(8px);
-    border-radius: 0 0 0 10px;
-    border: 1px solid #A3A3A3;
-    transition: .3s;
-    pointer-events: none;
-}
-#drop-down-option {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 2vh;
-}
-
-#drop-down-option:hover {
-    text-decoration: underline;
-}
-
-/*------------------- Nav menu for wider screen --------------------*/
-.menu-widerScreen {
-    display: none;
-    font-weight: 500;
-}
-
-#nav-button {
-    position: relative;
-    margin-left: 2vw;
-    cursor: pointer;
-    transition: .5s;
-    font-weight: 700;
-}
-#nav-button::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: -1px;
-    width: 0%;
-    height: 4px;
-    background-color: #fff;
-    transition: .5s;
-}
-#nav-button:hover::after {
-    width: 110%;
-}
-#nav-button:hover {
-    opacity: .5;
-}
-
-
 /* ===========================First page ==========================*/
 .firstPage {
     position: relative;
-    height: 100vh;
     height: 100dvh;
 }
 
@@ -188,9 +90,8 @@ nav .title {
 }
 
 .title-wraper h2{
-    font-size: clamp(20px, 4vw, 30px);
+    font-size: clamp(20px, 4vw, 40px);
 }
-
 
 .frontend {
     position: relative;
@@ -229,15 +130,13 @@ nav .title {
     position: relative;
     background-image: linear-gradient(to bottom, #7C00F9, #B300F9, #D800F8, #F900EC, #F900BB);
     -webkit-background-clip: text;
-    font-size: clamp(30px, 11vw, 80px);
+    font-size: clamp(30px, 11vw, 140px);
     text-transform: uppercase;
     font-weight: 700;
     color: #A3A3A3;
     letter-spacing: 5px;
     cursor: default;
 }
-
-
 
 #letter::after {
     content: '';
@@ -293,28 +192,25 @@ nav .title {
     rotate: 45deg;
 }
 
-
 .scrollDownArrow{
     opacity: .5;
     position: absolute;
-    top: 10px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 130px;
     animation: ArrowUpDown 2s infinite;
 }
 
-
 @keyframes ArrowUpDown {
     0% {
-        top: 10px;
+        top: 0px;
     }
     50% {
-        top: 20px;
+        top: 10px;
     }
 
 }
-
 
 /*================================= Second page ===================================*/
 .secondPage {

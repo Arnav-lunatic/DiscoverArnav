@@ -1,9 +1,4 @@
 const body = document.querySelector('body')
-const menuButton = document.querySelector('.menu')
-const line1 = document.querySelector('.line1')
-const line2 = document.querySelector('.line2')
-const line3 = document.querySelector('.line3')
-const dropDownMenu = document.querySelector('.drop-down-menu')
 const devLetter = document.querySelectorAll('#letter')
 const frontend = document.querySelector('.frontend')
 const loaderText = document.querySelectorAll('#loader-text')
@@ -17,35 +12,6 @@ const cursor = document.querySelector('.cursor')
 document.addEventListener('mousemove', e => {
     cursor.style.top = `${e.pageY-32}px`
     cursor.style.left = `${e.pageX-32}px`
-})
-
-
-
-// navbar Menu button for mobile screen
-let menuClicked = 0
-function navMenuClose() {
-    line1.style.transform = ''
-    line3.style.transform = ''
-    dropDownMenu.style.right = '-150px'
-    line2.style.opacity = '1'
-    dropDownMenu.style.opacity = '0'
-    dropDownMenu.style.pointerEvents = 'none'
-    menuClicked = 0
-}
-menuButton.addEventListener('click', ()=>{
-    if (menuClicked === 0) {
-        line1.style.transform = 'rotate(45deg) translateX(42%) scale(1.1)'
-        line3.style.transform = 'rotate(-45deg) translateX(42%) scale(1.1)'
-        line2.style.opacity = '0'
-        dropDownMenu.style.right = '-13px'
-        dropDownMenu.style.opacity = '1'
-        dropDownMenu.style.pointerEvents = 'auto'
-
-        menuClicked = 1
-        closePopUp()
-    }else {
-        navMenuClose()
-    }
 })
 
 //first effects
@@ -79,6 +45,7 @@ frontendTxtLoad()
 
 //Second Page
 const projectsList = [
+    { name: 'Luna Music', iconPath: 'assets/icons/lunaMusic.png', id:'lunaMusic'},
     { name: 'Simple Music Player', iconPath: 'assets/icons/music.png', id: 'simpleMusicPlayer' },
     { name: 'Luna Insight', iconPath: 'assets/icons/news.png', id: 'lunaInsight' },
     { name: 'Luna Forecast', iconPath: 'assets/icons/weather-app.png', id: 'lunaForecast' },
@@ -88,6 +55,7 @@ const projectsList = [
 ]
 
 const projectDescription = [{
+    lunaMusic: `This is a music streaming application built with React that utilizes an unofficial JioSaavn AP. It allows you to browse, play, and download music. This is a beta version and may contain bugs. I am actively working on improvements and will address any issues in future updates.`,
     lunaInsight: `It's a responsive News website made using HTML, CSS, and JavaScript using "New York Times API".`,
     lunaForecast: `It's a Weather WebApp made using HTML, CSS, and JavaScript using "OpenWeatherMap API"`,
     tasksTales: `It's a Todo WebApp made using HTML, CSS, and Javascript and it stores data in "Browser's Local Storage"`,
@@ -96,6 +64,7 @@ const projectDescription = [{
     calculator: `It's a Simple Calculator made using HTML, CSS, and JavaScript without 'Eval Function'`,
 },
     {
+        lunaMusic: 'https://lunamusic.vercel.app/',      
         simpleMusicPlayer: `https://arnav-lunatic.github.io/Simple-Music-Player/`,
         lunaInsight: `https://arnav-lunatic.github.io/LunaInsight/`,
         lunaForecast: `https://arnav-lunatic.github.io/LunaForecast/`,
@@ -122,7 +91,6 @@ function closePopUp() {
 document.querySelectorAll('.project').forEach((element) => {
     element.addEventListener('click', () => {
         // if navMenu is opened, then it will close it
-        navMenuClose()
 
         projectDescriptionPopup.innerHTML = ''
         projectDescriptionPopup.style.opacity = '1'
